@@ -1,6 +1,6 @@
 
 import Taro, { Component } from '@tarojs/taro'
-import './detail.scss'
+import './detail.less'
 
 export default class detail extends Component {
 	state = {

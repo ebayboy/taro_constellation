@@ -1,6 +1,6 @@
 import Taro, { Component, Config } from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
-import './index.scss'
+import './index.less'
 
 import Constellation from '../../component/constellation'
 import bg from '../../public/bg.jpeg'

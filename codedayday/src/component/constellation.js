@@ -1,7 +1,7 @@
 
 import Taro, { Component } from '@tarojs/taro'
-import './constellation.scss'
 import {View, Image} from '@tarojs/components'
+import './constellation.less'
 
 class Constellation extends Component {
 
