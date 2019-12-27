@@ -4,6 +4,7 @@ import './constellation.scss'
 import {View, Image} from '@tarojs/components'
 
 class Constellation extends Component {
+
 	//跳转页面
 	onTap(name) 
 	{
@@ -17,7 +18,7 @@ class Constellation extends Component {
 		const show = ['白羊座', '金牛座', '双子座', 
 			'巨蟹座', '狮子座', '处女座', '天秤座', 
 			'天蝎座', '射手座', '摩羯座', '水瓶座', '双鱼座']
-		let status = show.map((item)) => {
+		let status = show.map((item) => {
 			let tempItem = 'http://cdn.uneedzf.com/wepyBook/constellation/' + item + '.jpg'
 			return (
 				<View class='item' onClick={this.onTap.bind(this, item)} >
@@ -26,7 +27,7 @@ class Constellation extends Component {
 					</View>
 				</View>
 			)
-		}
+		})
 		return (
 			<View>
 				{status}
