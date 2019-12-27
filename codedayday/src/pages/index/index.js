@@ -1,6 +1,9 @@
 import Taro, { Component, Config } from '@tarojs/taro'
-import { View, Text } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import './index.scss'
+
+import Constellation from '../../component/constellation'
+import bg from '../../public/bg.jpeg'
 
 export default class Index extends Component {
 
