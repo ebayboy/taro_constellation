@@ -1,3 +1,4 @@
 #!/bin/bash
 
-yarn dev:weapp
+#yarn dev:weapp
+taro build --type weapp --watch
