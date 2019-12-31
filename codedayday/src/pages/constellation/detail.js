@@ -23,13 +23,10 @@ export default class detail extends Component {
 		const query = params.constellation
 		//query里面是连接上带的参数
 
-		console.log(query)
-
 		this.getUserChoice(query)
 	}
 
 	getUserChoice(constellation) {
-
 		Taro.request({
 			//https://www.codedayday.com:8443
 			//https://www.codedayday.com:8443/myapi/Constellation?name=白羊座
@@ -40,8 +37,6 @@ export default class detail extends Component {
 				'content-type': 'application/json'
 			}
 		}).then((res) => {
-
-			console.log(res.data)
 			this.setState({
 
 				constellation: res.data.data,

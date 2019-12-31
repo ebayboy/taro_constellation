@@ -8,10 +8,9 @@ class Constellation extends Component {
 	//跳转页面
 	onTap(name) 
 	{
-		console.log(name)
 		//跳转到目的页面， 打开新页面
 
-		Taro.navigateTo({ url:'/pages/constellation/detail?constellatio=' + name })
+		Taro.navigateTo({ url:'/pages/constellation/detail?constellation=' + name })
 	}
 
 	render () {
