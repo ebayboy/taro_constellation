@@ -20,10 +20,9 @@ export default class detail extends Component {
 		const params = this.$router.params
 		//获取所有路由参数
 
-		//const query = params.constellation
+		const query = params.constellation
 		//query里面是连接上带的参数
 
-		var query="天蝎座"
 		console.log(query)
 
 		this.getUserChoice(query)
@@ -32,12 +31,12 @@ export default class detail extends Component {
 	getUserChoice(constellation) {
 
 		Taro.request({
-
-			url: 'https://www.uneedzf.com/wepyBook/api/getConstellation?constellation=' + constellation,
+			//https://www.codedayday.com:8443
+			//https://www.codedayday.com:8443/myapi/Constellation?name=白羊座
+			url: 'https://www.codedayday.com:8443/myapi/Constellation?name=' + constellation,
 			data: {
 			},
 			header: {
-
 				'content-type': 'application/json'
 			}
 		}).then((res) => {

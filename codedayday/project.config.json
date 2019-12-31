@@ -1,13 +1,16 @@
 {
-  "miniprogramRoot": "./dist",
-  "projectname": "codedayday",
-  "description": "codedayday",
-  "appid": "wx8e0fecdd3231836e",
-  "setting": {
-    "urlCheck": true,
-    "es6": false,
-    "postcss": false,
-    "minified": false
-  },
-  "compileType": "miniprogram"
+	"miniprogramRoot": "dist/",
+	"projectname": "codedayday",
+	"description": "codedayday",
+	"appid": "wx8e0fecdd3231836e",
+	"setting": {
+		"urlCheck": true,
+		"es6": false,
+		"postcss": false,
+		"minified": false
+	},
+	"compileType": "miniprogram",
+	"simulatorType": "wechat",
+	"simulatorPluginLibVersion": {},
+	"condition": {}
 }
