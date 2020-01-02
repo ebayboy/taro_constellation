@@ -28,11 +28,11 @@ export default class Index extends Component {
 
 	componentDidHide () { }
 
+	//render -- 渲染
 	render() {
 		return (
 			<View>
-				<Image src={
-					bg} mode='widthFix' class='bg' />
+				<Image src={bg} mode='widthFix' class='bg' />
 				<View class='content'>
 					<View class='title'>
 						今日星座运势
