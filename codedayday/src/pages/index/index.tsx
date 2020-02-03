@@ -1,6 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable jsx-quotes */
 import Taro, { Component } from "@tarojs/taro";
+import { AtButton } from 'taro-ui'
 import { View, Image } from "@tarojs/components";
 
 import "./index.scss";
@@ -44,6 +45,7 @@ export default class Index extends Component {
         <View className="content">
           <View className="title">今日星座运势</View>
           <Constellation></Constellation>
+          <AtButton>TaroUI按钮</AtButton>
         </View>
       </View>
     );
