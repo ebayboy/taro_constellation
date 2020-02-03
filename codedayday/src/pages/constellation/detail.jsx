@@ -1,22 +1,23 @@
 
-import Taro, { Component } from '@tarojs/taro'
-import './detail.less'
+import Taro, { Config, Component } from '@tarojs/taro'
+import { Progress, View } from "@tarojs/components";
+import './detail.scss'
 
 export default class detail extends Component {
 	state = {
 		constellation: {},
-		allNum : 0, 
-		healthNum: 0, 
+		allNum: 0,
+		healthNum: 0,
 		loveNum: 0,
 		moneyNum: 0,
 		workNum: 0
 	}
 
-	config = {
+	config: Config = {
 		navigationBarTitleText: '详情'
 	}
 
-	componentWillMount () {
+	componentWillMount() {
 		const params = this.$router.params
 		//获取所有路由参数
 
@@ -38,7 +39,6 @@ export default class detail extends Component {
 			}
 		}).then((res) => {
 			this.setState({
-
 				constellation: res.data.data,
 				allNum: res.data.data.all.slice(0, -1),
 				healthNum: res.data.data.health.slice(0, -1),
@@ -49,53 +49,41 @@ export default class detail extends Component {
 		})
 	}
 
-	render () {
+	render() {
 		return (
 			<View class='page'>
 				<View class='title'>
-					{
-						constellation.name}
+					{constellation.name}
 				</View>
 				<View class='date'>
-					{
-						constellation.datetime}
+					{constellation.datetime}
 				</View>
 				<View class='date'>
-					幸运色：{
-						constellation.color}
+					幸运色：{constellation.color}
 				</View>
 				<View class='friend'>
-					友好星座：{
-						constellation.QFriend}
+					友好星座：{constellation.QFriend}
 				</View>
 				<View class='summary'>
-					{
-						constellation.summary}
+					{constellation.summary}
 				</View>
 				<View class='point'>
 					综合指数
-					<Progress activeColor='#c69ff7' percent={
-						allNum} showInfo active />
+					<Progress activeColor='#c69ff7' percent={allNum} showInfo active />
 				</View>
-				<View class='point'>
-					健康指数
-					<Progress  activeColor='#c4f79f' percent={
-						healthNum} showInfo active />
+				<View class='point'> 健康指数
+					<Progress activeColor='#c4f79f' percent={healthNum} showInfo active />
 				</View>
 				<View class='point'>
 					爱情指数
-					<Progress  activeColor='#f79f9f' percent={
-						loveNum} showInfo active />
+					<Progress activeColor='#f79f9f' percent={loveNum} showInfo active />
 				</View>
-				<View class='point'>
-					财运指数
-					<Progress  activeColor='#f7f19f' percent={
-						moneyNum} showInfo active />
+				<View class='point'> 财运指数
+					<Progress activeColor='#f7f19f' percent={moneyNum} showInfo active />
 				</View>
 				<View class='point'>
 					工作指数
-					<Progress  activeColor='#9fbdf7' percent={
-						workNum} showInfo active />
+					<Progress activeColor='#9fbdf7' percent={workNum} showInfo active />
 				</View>
 			</View>
 		)
