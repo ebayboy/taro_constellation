@@ -1,4 +1,4 @@
-import Taro, { Component, Config } from "@tarojs/taro";
+import Taro, { Component  } from "@tarojs/taro";
 import Index from "./pages/index/index";
 
 import "./app.scss";
@@ -18,7 +18,9 @@ class App extends Component {
    * 提示和声明 navigationBarTextStyle: 'black' | 'white' 类型冲突, 需要显示声明类型
    */
 
-  config: Config = {
+  componentDidShow() {}
+
+  config: Taro.Config = {
     pages: ["pages/index/index", "pages/constellation/detail"],
     window: {
       backgroundTextStyle: "light",
@@ -28,9 +30,6 @@ class App extends Component {
     }
   };
 
-  componentDidMount() {}
-
-  componentDidShow() {}
 
   componentDidHide() {}
 

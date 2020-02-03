@@ -1,7 +1,9 @@
-import Taro, { Component, Config } from "@tarojs/taro";
+/* eslint-disable no-unused-vars */
+/* eslint-disable jsx-quotes */
+import Taro, { Component } from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 
-import "./index.scss";
+import "./index.less";
 
 import Constellation from "../../component/constellation";
 import bg from "../../public/bg.jpeg";
@@ -19,7 +21,8 @@ export default class Index extends Component {
     super(...arguments);
   }
 
-  config: Config = {
+  // eslint-disable-next-line react/sort-comp
+  config: Taro.Config = {
     navigationBarTitleText: "首页"
   };
 
@@ -37,9 +40,9 @@ export default class Index extends Component {
   render() {
     return (
       <View>
-        <Image src={bg} />
-        <View>
-          <View>今日星座运势</View>
+        <Image src={bg} mode="widthFix" className="bg" />
+        <View className="content">
+          <View className="title">今日星座运势</View>
           <Constellation></Constellation>
         </View>
       </View>

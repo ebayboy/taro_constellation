@@ -1,7 +1,9 @@
+/* eslint-disable no-unused-vars */
+/* eslint-disable react/sort-comp */
 
-import Taro, { Config, Component } from '@tarojs/taro'
+import Taro, { Component } from '@tarojs/taro'
 import { Progress, View } from "@tarojs/components";
-import './detail.scss'
+import './detail.less'
 
 export default class detail extends Component {
 	state = {
@@ -13,7 +15,7 @@ export default class detail extends Component {
 		workNum: 0
 	}
 
-	config: Config = {
+	config = {
 		navigationBarTitleText: '详情'
 	}
 
@@ -50,6 +52,14 @@ export default class detail extends Component {
 	}
 
 	render() {
+		const {
+			constellation,
+			allNum,
+			healthNum,
+			loveNum,
+			moneyNum,
+			workNum } = this.state
+
 		return (
 			<View class='page'>
 				<View class='title'>

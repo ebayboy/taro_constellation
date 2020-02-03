@@ -2,7 +2,7 @@
 
 import Taro, { Component } from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
-import './constellation.scss'
+import './constellation.less'
 
 import 白羊座 from '../public/白羊座.jpg'
 import 金牛座 from '../public/金牛座.jpg'
