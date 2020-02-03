@@ -3,7 +3,7 @@
 
 import Taro, { Component } from '@tarojs/taro'
 import { Progress, View } from "@tarojs/components";
-import './detail.less'
+import './detail.scss'
 
 export default class detail extends Component {
 	state = {
