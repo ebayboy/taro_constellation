@@ -16,7 +16,7 @@ import 摩羯座 from '../public/摩羯座.jpg'
 import 水瓶座 from '../public/水瓶座.jpg'
 import 双鱼座 from '../public/双鱼座.jpg'
 
-class Constellation extends Component {
+export default class Constellation extends Component {
 
 	//跳转页面
 	onTap(name) 
