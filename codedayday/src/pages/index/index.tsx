@@ -3,7 +3,7 @@
 import Taro, { Component } from "@tarojs/taro";
 import { View, Image } from "@tarojs/components";
 
-import "./index.less";
+import "./index.scss";
 
 import Constellation from "../../component/constellation";
 import bg from "../../public/bg.jpeg";

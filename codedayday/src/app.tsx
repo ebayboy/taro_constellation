@@ -1,6 +1,6 @@
 import Taro, { Component  } from "@tarojs/taro";
+import 'taro-ui/dist/style/index.scss' // 全局引入一次即可
 import Index from "./pages/index/index";
-
 import "./app.scss";
 
 // 如果需要在 h5 环境中开启 React Devtools
